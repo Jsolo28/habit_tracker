@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class HabitType {
   final String name;
   final Color color;
-  final Icon icon;
+  final IconData icon;
   final String description;
 
   HabitType({

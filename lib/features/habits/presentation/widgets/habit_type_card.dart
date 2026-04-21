@@ -30,7 +30,12 @@ class HabitTypeCard extends StatelessWidget {
                 children: [
                   Align(
                     alignment: Alignment.center - Alignment(0, 0.5),
-                    child: habitType.icon,
+                    child: Icon(
+                      habitType.icon,
+                      color: state == habitType
+                          ? AppColors.primaryText
+                          : AppColors.secondaryText,
+                    ),
                   ),
                   Align(
                     alignment: Alignment.center + Alignment(0, 0.5),
@@ -40,7 +45,9 @@ class HabitTypeCard extends StatelessWidget {
                         habitType.name,
                         textAlign: TextAlign.center,
                         style: TextStyle(
-                          color: AppColors.primaryText,
+                          color: state == habitType
+                              ? AppColors.primaryText
+                              : AppColors.secondaryText,
                           fontWeight: FontWeight.bold,
                           fontSize: AppSize.textSm,
                         ),
